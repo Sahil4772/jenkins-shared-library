@@ -129,12 +129,7 @@
         <configuration>
           <trimStackTrace>false</trimStackTrace>
           <argLine>${surefireArgLine}</argLine>
-          <archive>
-                    <index>true</index>
-                    <manifest>
-                        <mainClass>org.yourcompany.ReleaseIDGenerator</mainClass>
-                    </manifest>
-                </archive>
+          <sourceDirectory>${project.basedir}/src/main/groovy</sourceDirectory>
         </configuration>
       </plugin>
     </plugins>
