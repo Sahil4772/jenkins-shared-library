@@ -11,16 +11,16 @@ pipeline {
 
         stage ('Build') {
             steps {
-                bat 'mvn -Dmaven.test.failure.ignore=true clean install'
+                bat 'C:\Users\sban34\Downloads\apache-maven-3.5.4-bin\apache-maven-3.5.4\bin\mvn -Dmaven.test.failure.ignore=true clean install'
             }
             post {
                 success {
-                    junit 'target/surefire-reports/*.xml'
+                    junit 'target\surefire-reports\*.xml'
 
-                    jacoco classPattern: '**/target/classes',
-                           execPattern: '**/target/coverage-reports/jacoco-ut.exec',
-                           sourcePattern: '**/src/org/yourcompany',
-                           exclusionPattern: '**/target/classes/*closure*.class'
+                    jacoco classPattern: '**\target\classes',
+                           execPattern: '**\target\coverage-reports\jacoco-ut.exec',
+                           sourcePattern: '**\src\org\yourcompany',
+                           exclusionPattern: '**\target\classes\*closure*.class'
                 }
             }
         }
