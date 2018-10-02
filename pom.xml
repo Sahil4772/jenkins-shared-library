@@ -129,7 +129,6 @@
         <configuration>
           <trimStackTrace>false</trimStackTrace>
           <argLine>${surefireArgLine}</argLine>
-          <sourceDirectory>${project.basedir}/src/main/groovy</sourceDirectory>
         </configuration>
       </plugin>
     </plugins>
