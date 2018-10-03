@@ -11,7 +11,7 @@ pipeline {
 
         stage ('Build') {
             steps {
-                bat 'C:\\Users\\sban34\\Downloads\\apache-maven-3.5.4-bin\\apache-maven-3.5.4\\bin\\mvn -Dmaven.test.failure.ignore=true clean install'
+                bat 'mvn clean install'
             }
             post {
                 success {
